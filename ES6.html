@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X</title>
+    <style>
+      * {
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+      1 - Arrow Function | shorten code
+
+          function test(X, Y) {
+            return X + Y;
+          }
+
+          TO:
+
+          let Arrow = (X, Y) => X + Y;
+      <hr>
+      2- var to => let & const
+
+          var   | Global scope ,
+                  redeclared,
+                  When call before declare => return undefined
+                  Editing
+                  var test; 
+
+          let   | locat scope,
+                  NOT redeclared,
+                  When call before declare => return error
+                  Edit
+                  let test; 
+
+          const | locat scope,
+                  NOT redeclared,
+                  When call before declare => return error
+                  NOT Edit
+                  const test; ERROR
+      <hr>
+      3- Template Literals 
+
+          let name = "mahmod"
+
+          let test = "hi " + "im " name + "i'm coder"
+
+          =>
+          let test = `hi im ${name} i'm coder`
+      <hr>
+      4- Spread Operator 
+
+          let test = [1,2,3]
+
+          sum(test) => 123UndefinedUndefined , Use apply()
+          
+          sum(...test) =>  6
+      <hr>
+      5- Rest Parameter
+            function sumArray(...numbers) {
+              let total = 0;
+              for (let number of numbers) total += number;
+              return total;
+            }
+            console.log(sumArray(1, 2, 3, 4, 5));
+      <hr>
+      6- Default Parameter | if not Pass Parameter Takes DefaultValue 
+
+          function test( one = "DefaultValueOne", 
+                          two = "DefaultValueTwo", 
+                          three = "DefaultValueThree") 
+                        { consol.log(` ${one} ${two} ${three} `) }
+      <hr>
+      7- promise | resolve callback hell problem
+          let myPromise = new Promise( ( resolve, reject ) => {
+                              let connect = true
+                              if ( connect ) {
+                                resolve("Success");
+                              } else {reject( "Failure" );}  })
+                          
+                          
+          myPromise.then(
+            ( resolve ) => console.log(resolve),
+            ( reject ) => console.log(reject)
+          );
+          
+          
+    </pre>
+    <script src="js/script.js"></script>
+  </body>
+</html>
